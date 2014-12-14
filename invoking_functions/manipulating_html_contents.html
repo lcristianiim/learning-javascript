@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manipulating html elements using javascript</title>
+</head>
+<body>
+	<nav class="my_div">
+	</nav>
+
+
+	<script type="text/javascript">
+
+		var elements = {
+			carte : 'Amintiri din copilarie',
+			computer : 'Asus N76V',
+			studii : 'Universitare'
+		};
+
+		var display = function(){
+			var output = "<ul>";
+			var my_list = document.querySelectorAll(".my_div");
+			
+			for (var key in arguments[0]) {
+				output += "<li>" + elements[key] + "</li>";
+			}
+			
+			output += "</ul>";
+
+			for (var i = my_list.length - 1; i >= 0; i--) {
+			    my_list[i].innerHTML = output;
+			}
+
+		}(elements);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Using call and apply</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var speak = function(say){
+			return (
+					console.log(say),
+					console.log(this.agresive_mood)
+				)
+		}
+
+		var saysomething = {
+			normal_mood : "miau",
+			agresive_mood : "harrrerr"
+		}
+
+		speak.call(saysomething, 'My name is kitty');
+
+		speak.apply(saysomething, ['My name is kitty in an array']);
+
+	</script>
+</body>
+</html>

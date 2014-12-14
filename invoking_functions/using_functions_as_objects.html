@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Using functions as objects</title>
+	</head>
+	<body>
+	<script type="text/javascript" charset="utf-8">
+            var calc = {
+                status:  "Awesome",
+                         plus: function (a,b){
+                         return (
+                             console.log(a+b),
+                             console.log(this)
+                                 )
+                         }
+
+            }
+            calc.plus (2,6);
+	</script>
+	</body>
+</html>

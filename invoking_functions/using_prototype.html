@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Using prototype</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var say = function(speak){
+			
+			return console.log(speak);
+		}
+
+		var Dog = function(){
+			var name, breed;
+		}
+
+		var Cat = function(){
+			var name, breed;
+		}
+
+		firstDog = new Dog;
+		firstDog.name = "Boby";
+		firstDog.breed = "Bulldog";
+
+		firstCat = new Cat;
+		firstCat.name = "Mitrut";
+		firstCat.breed = "Homecat";
+
+		Dog.prototype.say = say;
+		Cat.prototype.say = say;
+
+		firstDog.say('wouf');
+		firstCat.say('miau');
+
+	</script>
+</body>
+</html>

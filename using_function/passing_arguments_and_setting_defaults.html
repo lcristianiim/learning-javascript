@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Passing arguments and setting defaults</title>
+
+</head>
+    <body>
+
+    <script type="text/javascript">
+        var cristian = (function () {
+            var DEFAULTS = {
+                say: 'Salutare din default'
+            };
+
+            return {
+                speak: function () {
+                    var my_arguments = arguments[0] || '';
+                    var statement = my_arguments.say || DEFAULTS.say;
+
+                    console.log(statement);
+                }
+            }
+
+        })();
+
+        //calling this function in this way it will return the defaults
+        cristian.speak();
+
+        //calling this function in this way it will return the specified arguments
+        cristian.speak({say: 'Hello! This is the custom content'});
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Invoking functions</title>
+	</head>
+	<body>
+	    	<script type="text/javascript" charset="utf-8">
+		    var plus = function (a,b){
+		        return (
+		        	console.log(a+b),
+		        	console.log(this)
+		        	);
+		    }
+		    plus (2,4);
+			//function plus (a,b){
+			//    return (
+			//	    console.log (a+b),
+			//	    console.log (this),
+			//	    console.log (arguments)
+			//	   )
+			//}
+			//plus (3,6);
+		</script>
+	</body>
+</html>
